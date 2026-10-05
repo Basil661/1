@@ -14,3 +14,15 @@ jobs:
 
       - name: Print welcome message
         run: echo "Hello, GitHub Actions CI/CD!"
+
+      - name:  Run commands
+        run: |
+          echo "start app"
+          echo "directory is $(pwd)"
+          python3 --version
+
+      - name: use custom environment variable
+        env: 
+          User_name: Student
+        run: echo "Welcome $User_name"
+          
